@@ -1,29 +1,5 @@
 #include"Hero.h"
 
-Hero* Hero::create(std::string heroName)
-{
-	Hero* hero = new(std::nothrow)Hero;
-	if (hero && hero->init(heroName))
-	{
-		//hero->autorelease();
-		return hero;
-	}
-	CC_SAFE_DELETE(hero);
-	return nullptr;
-}
-
-bool Hero::init(std::string heroName)
-{
-	if (!Sprite::init())
-	{
-		return false;
-	}
-
-	initHeroData(heroName);
-
-	return true;
-}
-
 bool Hero::initHeroData(std::string heroName)
 {
 	cocos2d::ValueMap value = cocos2d::FileUtils::getInstance()->getValueMapFromFile("hero_enemy\\HeroDataAtEachLevel.plist");
@@ -52,36 +28,34 @@ bool Hero::initHeroData(std::string heroName)
 	return true;
 }
 
-Sprite* Hero::initWeapon()
+void Hero::initWeapon()
 {
 	if (_heroName == "Archer")
 	{
-		Sprite* initialWeapon = Sprite::create("weapon/betterBow.png");
-		_myWeapon.setWeaponName("betterBow");
-		_myWeapon.initData();
-		return initialWeapon;
+		_myWeapon = Weapon::create("weapon/bow.png");
+		_myWeapon->setWeaponName("bow");
+		_myWeapon->initData();
+
 	}
 	else if (_heroName == "Berserker")
 	{
-		Sprite* initialWeapon = Sprite::create("weapon/betterSword.png");
-		_myWeapon.setWeaponName("betterSword");
-		_myWeapon.initData();
-		return initialWeapon;
+		_myWeapon = Weapon::create("weapon/sword.png");
+		_myWeapon->setWeaponName("sword");
+		_myWeapon->initData();
 	}
 	else if (_heroName == "Paladin")
 	{
-		Sprite* initialWeapon = Sprite::create("weapon/betterPistol.png");
-		_myWeapon.setWeaponName("betterPistol");
-		_myWeapon.initData();
-		return initialWeapon;
+		_myWeapon = Weapon::create("weapon/pistol.png");
+		_myWeapon->setWeaponName("pistol");
+		_myWeapon->initData();
 	}
 }
 
-Bullet* Hero::attack()
+Bullet* Hero::remoteAttack()
 {
-	std::string fileName = StringUtils::format("weapon/bullet%d.png", _myWeapon.getBulletNum());
+	std::string fileName = StringUtils::format("weapon/bullet%d.png", _myWeapon->getBulletNum());
 	Bullet* bullet = Bullet::create(fileName);
-	bullet->setVelocity(Vec2(_myWeapon.getBulletV(), 0));
+	bullet->setVelocity(Vec2(_myWeapon->getBulletV(), 0));
 	return bullet;
 }
 

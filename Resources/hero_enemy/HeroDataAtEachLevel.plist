@@ -22,16 +22,16 @@
             <key>magic</key>
             <array>
                 <integer>0</integer>
-                <integer>200</integer> 
-                <integer>220</integer>
-                <integer>240</integer>
-                <integer>260</integer>
+                <integer>150</integer> 
+                <integer>170</integer>
+                <integer>190</integer>
+                <integer>210</integer>
+                <integer>230</integer>
+                <integer>250</integer>
                 <integer>280</integer>
-                <integer>300</integer>
-                <integer>330</integer>
-                <integer>360</integer>
-                <integer>390</integer>
-                <integer>420</integer>
+                <integer>310</integer>
+                <integer>340</integer>
+                <integer>370</integer>
             </array>
             <key>shield</key>
             <array>
@@ -67,16 +67,16 @@
             <key>magic</key>
             <array>
                 <integer>0</integer>
-                <integer>300</integer>
-                <integer>330</integer>
-                <integer>360</integer>
-                <integer>390</integer>
-                <integer>420</integer>
-                <integer>460</integer>
-                <integer>500</integer>
-                <integer>540</integer>
-                <integer>580</integer>
-                <integer>620</integer>
+                <integer>250</integer>
+                <integer>280</integer>
+                <integer>310</integer>
+                <integer>340</integer>
+                <integer>370</integer>
+                <integer>410</integer>
+                <integer>450</integer>
+                <integer>490</integer>
+                <integer>530</integer>
+                <integer>570</integer>
             </array>
             <key>shield</key>
             <array>
@@ -112,16 +112,16 @@
             <key>magic</key>
             <array>
                 <integer>0</integer>
+                <integer>200</integer>
+                <integer>225</integer>
                 <integer>250</integer>
                 <integer>275</integer>
                 <integer>300</integer>
-                <integer>325</integer>
-                <integer>350</integer>
-                <integer>380</integer>
-                <integer>410</integer>
-                <integer>440</integer>
-                <integer>470</integer>
-                <integer>500</integer>
+                <integer>330</integer>
+                <integer>360</integer>
+                <integer>390</integer>
+                <integer>420</integer>
+                <integer>450</integer>
             </array>
             <key>shield</key>
             <array>

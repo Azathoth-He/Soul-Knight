@@ -11,7 +11,7 @@
             </array>
             <key>attackRate</key>
             <array>
-                <integer>1</integer>
+                <real>0.3</real>
             </array>
             <key>mode</key>
             <array>
@@ -27,18 +27,18 @@
             </array>
             <key>bulletV</key>
             <array>
-                <integer>460</integer>
+                <integer>525</integer>
             </array>
         </dict>
         <key>betterBow</key>
         <dict>
             <key>attack</key>
             <array>
-                <integer>2</integer>
+                <integer>3</integer>
             </array>
             <key>attackRate</key>
             <array>
-                <integer>1</integer>
+                <real>0.3</real>
             </array>
             <key>mode</key>
             <array>
@@ -54,7 +54,7 @@
             </array>
             <key>bulletV</key>
             <array>
-                <integer>500</integer>
+                <integer>550</integer>
             </array>
         </dict>
         <key>pistol</key>
@@ -65,7 +65,7 @@
             </array>
             <key>attackRate</key>
             <array>
-                <integer>1</integer>
+                <real>0.6</real>
             </array>
             <key>mode</key>
             <array>
@@ -81,18 +81,18 @@
             </array>
             <key>bulletV</key>
             <array>
-                <integer>400</integer>
+                <integer>480</integer>
             </array>
         </dict>
         <key>betterPistol</key>
         <dict>
             <key>attack</key>
             <array>
-                <integer>3</integer>
+                <integer>4</integer>
             </array>
             <key>attackRate</key>
             <array>
-                <integer>1</integer>
+                <real>0.65</real>
             </array>
             <key>mode</key>
             <array>
@@ -108,7 +108,7 @@
             </array>
             <key>bulletV</key>
             <array>
-                <integer>450</integer>
+                <integer>500</integer>
             </array>
         </dict>
         <key>sword</key>
@@ -119,7 +119,7 @@
             </array>
             <key>attackRate</key>
             <array>
-                <integer>1</integer>
+                <real>0.75</real>
             </array>
             <key>mode</key>
             <array>
@@ -127,7 +127,7 @@
             </array>
             <key>magicUse</key>
             <array>
-                <integer>2</integer>
+                <integer>3</integer>
             </array>
             <key>bulletNum</key>
             <array>
@@ -146,7 +146,7 @@
             </array>
             <key>attackRate</key>
             <array>
-                <integer>1</integer>
+                <real>0.8</real>
             </array>
             <key>mode</key>
             <array>
@@ -155,6 +155,33 @@
             <key>magicUse</key>
             <array>
                 <integer>4</integer>
+            </array>
+            <key>bulletNum</key>
+            <array>
+                <integer>-1</integer>
+            </array>
+            <key>bulletV</key>
+            <array>
+                <integer>-1</integer>
+            </array>
+        </dict>
+        <key>axe</key>
+        <dict>
+            <key>attack</key>
+            <array>
+                <integer>6</integer>
+            </array>
+            <key>attackRate</key>
+            <array>
+                <real>1.2</real>
+            </array>
+            <key>mode</key>
+            <array>
+                <integer>1</integer>
+            </array>
+            <key>magicUse</key>
+            <array>
+                <integer>7</integer>
             </array>
             <key>bulletNum</key>
             <array>

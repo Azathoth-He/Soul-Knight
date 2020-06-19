@@ -71,6 +71,71 @@ bool MapInformation::checkNewScene(TMXTiledMap* map, Vec2 position)
 	return false;
 }
 
+bool MapInformation::check1(TMXTiledMap* map, Vec2 position)
+{
+	auto _1 = map->getLayer("collision");
+	Vec2 tileCoord = this->tileCoordFromPosition(map, position);
+	int tileGid = _1->getTileGIDAt(tileCoord);
+	if (tileGid > 0)
+	{
+		Value prop = map->getPropertiesForGID(tileGid);
+		ValueMap propValueMap = prop.asValueMap();
+
+		std::string newScene = propValueMap["1"].asString();
+
+		if (newScene == "true")
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+	return false;
+}
+
+bool MapInformation::check2(TMXTiledMap* map, Vec2 position)
+{
+	auto _2 = map->getLayer("collision");
+	Vec2 tileCoord = this->tileCoordFromPosition(map, position);
+	int tileGid = _2->getTileGIDAt(tileCoord);
+	if (tileGid > 0)
+	{
+		Value prop = map->getPropertiesForGID(tileGid);
+		ValueMap propValueMap = prop.asValueMap();
+
+		std::string newScene = propValueMap["2"].asString();
+
+		if (newScene == "true")
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+	return false;
+}
+
+bool MapInformation::checkNextStep(TMXTiledMap* map, Vec2 position)
+{
+	auto _nextStep = map->getLayer("collision");
+	Vec2 tileCoord = this->tileCoordFromPosition(map, position);
+	int tileGid = _nextStep->getTileGIDAt(tileCoord);
+	if (tileGid > 0)
+	{
+		Value prop = map->getPropertiesForGID(tileGid);
+		ValueMap propValueMap = prop.asValueMap();
+
+		std::string newScene = propValueMap["nextStep"].asString();
+
+		if (newScene == "true")
+		{
+			return true;
+		}
+		else
+			return false;
+	}
+	return false;
+}
 
 Vec2 MapInformation::tileCoordFromPosition(TMXTiledMap* map, Vec2 position)
 {

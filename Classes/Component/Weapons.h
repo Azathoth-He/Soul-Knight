@@ -10,7 +10,7 @@ USING_NS_CC;
 //Ô¶³Ì
 #define REMOTE 2
 
-class Weapon
+class Weapon:public cocos2d::Sprite
 {
 	//¹¥»÷Á¦
 	CC_SYNTHESIZE(int, _attack, Attack);
@@ -26,10 +26,12 @@ class Weapon
 	CC_SYNTHESIZE(int, _bulletV, BulletV);
 	CC_SYNTHESIZE(std::string, _weaponName, WeaponName);
 
-	cocos2d::ValueMap weaponData;
+	//cocos2d::ValueMap weaponData;
 
 public:
 	void initData();
+
+	static Weapon* create(const std::string& filename);
 };
 
 

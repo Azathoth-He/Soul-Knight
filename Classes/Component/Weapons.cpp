@@ -1,6 +1,16 @@
 #include"Weapons.h"
 
-
+Weapon* Weapon::create(const std::string& filename)
+{
+	Weapon* weapon = new (std::nothrow) Weapon();
+	if (weapon && weapon->initWithFile(filename))
+	{
+		weapon->autorelease();
+		return weapon;
+	}
+	CC_SAFE_DELETE(weapon);
+	return nullptr;
+}
 
 void Weapon::initData()
 {

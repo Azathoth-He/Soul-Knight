@@ -13,6 +13,9 @@ public:
 	bool checkBorder(TMXTiledMap* map, Vec2 position);
 	bool checkDraw(TMXTiledMap* map, Vec2 position);
 	bool checkNewScene(TMXTiledMap* map, Vec2 position);
+	bool check1(TMXTiledMap* map, Vec2 position);
+	bool check2(TMXTiledMap* map, Vec2 position);
+	bool checkNextStep(TMXTiledMap* map, Vec2 position);
 };
 
 #endif // !_MAPINFORMATION_H_
