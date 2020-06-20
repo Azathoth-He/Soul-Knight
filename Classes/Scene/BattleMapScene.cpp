@@ -53,6 +53,10 @@ bool BattleMap::init(SecurityMap* combatScene)
 	_paladin = combatScene->_paladin;
 	_berserker = combatScene->_berserker;
 
+	_myHero.setCurrentHealth(_myHero.getMaxHealth());
+	_myHero.setCurrentMagic(_myHero.getMaxMagic());
+	_myHero.setCurrentShiled(_myHero.getMaxShield());
+
 	auto collision = _map->getLayer("collision");
 	collision->setVisible(false);
 
@@ -120,6 +124,10 @@ bool BattleMap::initLevel2(BattleMap* combatScene)
 	_archer = combatScene->_archer;
 	_paladin = combatScene->_paladin;
 	_berserker = combatScene->_berserker;
+
+	_myHero.setCurrentHealth(_myHero.getMaxHealth());
+	_myHero.setCurrentMagic(_myHero.getMaxMagic());
+	_myHero.setCurrentShiled(_myHero.getMaxShield());
 
 	auto collision = _map->getLayer("collision");
 	collision->setVisible(false);

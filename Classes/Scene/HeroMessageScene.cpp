@@ -177,6 +177,7 @@ void HeroMessage::upLevelCallBack()
 
 void HeroMessage::nextCallBack()
 {
+	this->setVisible(false);
 	auto nextScene = SecurityMap::createScene(this);
 	Director::getInstance()->replaceScene(nextScene);
 }
